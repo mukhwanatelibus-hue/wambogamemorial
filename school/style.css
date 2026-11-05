@@ -1,0 +1,465 @@
+/* --- VARIABLES (Colors from the Wamboga Badge) --- */
+:root {
+    --maroon: #8B0000; /* Dark red from logo */
+    --gold: #D4A017;   /* Gold from logo */
+    --black: #1a1a1a;
+    --white: #ffffff;
+    --light-gray: #f4f4f4;
+    --text-gray: #555555;
+    
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Poppins', sans-serif;
+}
+
+/* --- RESET & GLOBAL --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-body);
+    color: var(--black);
+    line-height: 1.6;
+    background-color: var(--white);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+a { text-decoration: none; color: inherit; }
+ul { list-style: none; }
+
+/* --- BUTTONS --- */
+.btn {
+    display: inline-block;
+    padding: 12px 25px;
+    font-family: var(--font-heading);
+    font-weight: 700;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+.btn-gold {
+    background-color: var(--gold);
+    color: var(--black);
+}
+.btn-gold:hover { background-color: #b88a13; }
+
+.btn-maroon {
+    background-color: var(--maroon);
+    color: var(--white);
+}
+.btn-maroon:hover { background-color: #6b0000; }
+
+.btn-outline {
+    border: 2px solid var(--white);
+    color: var(--white);
+}
+.btn-outline:hover {
+    background-color: var(--white);
+    color: var(--maroon);
+}
+
+/* --- TOP BAR --- */
+.top-bar {
+    background-color: var(--black);
+    color: var(--white);
+    padding: 8px 0;
+    font-size: 0.85rem;
+}
+.top-bar .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.top-info span { margin-right: 20px; }
+.top-info i { color: var(--gold); margin-right: 5px; }
+.top-social a { margin-left: 15px; color: var(--white); transition: 0.3s; }
+.top-social a:hover { color: var(--gold); }
+
+/* --- NAVBAR --- */
+header {
+    background-color: var(--white);
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.logo img {
+    height: 60px;
+    width: auto;
+}
+.logo-text h1 {
+    font-family: var(--font-heading);
+    font-size: 1.5rem;
+    color: var(--maroon);
+    line-height: 1;
+}
+.logo-text span {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 25px;
+}
+.nav-links a {
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: 0.3s;
+    text-transform: uppercase;
+}
+.nav-links a:hover, .nav-links a.active {
+    color: var(--maroon);
+}
+.nav-actions { display: flex; align-items: center; gap: 15px; }
+.hamburger { display: none; font-size: 1.5rem; cursor: pointer; color: var(--maroon); }
+
+/* --- HERO SECTION --- */
+.hero {
+    background: url('images/IMG-20261102-WA0008.jpg') center/cover;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.hero-overlay {
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: linear-gradient(rgba(139, 0, 0, 0.8), rgba(26, 26, 26, 0.8)); /* Maroon/Black gradient */
+}
+.hero-content {
+    position: relative;
+    z-index: 1;
+    color: var(--white);
+}
+.hero-motto {
+    font-family: var(--font-heading);
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.hero-subtext {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto 30px auto;
+}
+.hero-buttons { display: flex; justify-content: center; gap: 20px; }
+
+/* --- STATS SECTION --- */
+.stats {
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: 40px 0;
+}
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    text-align: center;
+}
+.stat-box i {
+    font-size: 2.5rem;
+    color: var(--gold);
+    margin-bottom: 15px;
+}
+.stat-box h3 {
+    font-size: 2rem;
+    font-family: var(--font-heading);
+}
+.stat-box p {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- WELCOME SECTION --- */
+.section-padding { padding: 80px 0; }
+.welcome-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+}
+.image-placeholder {
+    background-color: var(--light-gray);
+    height: 400px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: var(--gray);
+    border: 2px dashed #ccc;
+}
+.image-placeholder i { font-size: 4rem; color: var(--gold); margin-bottom: 10px;}
+.section-subtitle {
+    color: var(--gold);
+    font-family: var(--font-heading);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    margin-bottom: 10px;
+}
+.section-title {
+    font-family: var(--font-heading);
+    font-size: 2.2rem;
+    color: var(--maroon);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+.welcome-text p { margin-bottom: 20px; color: var(--text-gray); }
+
+.mission-box {
+    background-color: var(--light-gray);
+    border-left: 5px solid var(--maroon);
+    padding: 20px;
+    margin-bottom: 25px;
+}
+.mission-box h3 {
+    color: var(--maroon);
+    margin-bottom: 10px;
+}
+.mission-box i { color: var(--gold); }
+
+/* --- FOOTER --- */
+footer {
+    background-color: var(--black);
+    color: var(--white);
+    padding-top: 60px;
+}
+.footer-grid {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+.footer-col h3 {
+    color: var(--gold);
+    margin-bottom: 20px;
+    font-family: var(--font-heading);
+}
+.footer-col ul li { margin-bottom: 10px; }
+.footer-col ul li a { color: #ccc; transition: 0.3s; }
+.footer-col ul li a:hover { color: var(--gold); padding-left: 5px; }
+.contact-list li { color: #ccc; margin-bottom: 15px; }
+.contact-list i { color: var(--gold); margin-right: 10px; }
+
+.footer-bottom {
+    background-color: #111;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9rem;
+    color: #888;
+}
+
+/* --- WHATSAPP FLOAT --- */
+.whatsapp-float {
+    position: fixed;
+    width: 60px;
+    height: 60px;
+    bottom: 30px;
+    right: 30px;
+    background-color: #25d366;
+    color: #FFF;
+    border-radius: 50px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.3);
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+}
+.whatsapp-float:hover { transform: scale(1.1); }
+/* --- PAGE HEADERS (For Sub-pages) --- */
+.page-header {
+    background-color: var(--maroon);
+    color: var(--white);
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 5px solid var(--gold);
+}
+
+.page-header h1 {
+    font-family: var(--font-heading);
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.page-header p {
+    font-size: 1rem;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+/* --- GALLERY GRID --- */
+/* --- GALLERY GRID (UPDATED FOR REAL IMAGES) --- */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); /* Makes boxes wider */
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: var(--light-gray);
+    height: 250px; /* Fixed height for all images */
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* This is crucial: it stops the image from spilling out of the rounded corners */
+    position: relative;
+}
+
+/* Style specifically for the real images inside the grid */
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* This makes the image fill the box without stretching! */
+    transition: transform 0.4s ease;
+    cursor: pointer;
+}
+
+/* Zoom effect when you hover over a photo */
+.gallery-item img:hover {
+    transform: scale(1.08); 
+}
+
+/* Keep the placeholder styles for the ones you haven't added yet */
+.gallery-item i {
+    font-size: 3rem;
+    color: #ccc;
+    margin-bottom: 10px;
+}
+
+.gallery-item p {
+    color: #888;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- STAFF PAGE CSS --- */
+.staff-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+}
+
+.staff-card {
+    background: var(--white);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.staff-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.staff-img {
+    height: 250px;
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #aaa;
+}
+
+/* This ensures real photos fit perfectly like the gallery */
+.staff-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.staff-img i {
+    font-size: 8rem;
+}
+
+.staff-info {
+    padding: 20px;
+}
+
+.staff-info h3 {
+    color: var(--maroon);
+    font-family: var(--font-heading);
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.staff-info .role {
+    color: var(--gold);
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.staff-info .quals {
+    color: var(--text-gray);
+    font-size: 0.85rem;
+}
+
+/* --- MOBILE FIX FOR NAVBAR (If it breaks with 7 items) --- */
+@media (max-width: 1100px) {
+    .nav-links { gap: 15px; }
+    .nav-links a { font-size: 0.85rem; }
+}
+
+/* --- MOBILE RESPONSIVENESS --- */
+@media (max-width: 991px) {
+    .stats-grid { grid-template-columns: repeat(2, 1fr); }
+    .welcome-grid { grid-template-columns: 1fr; }
+    .footer-grid { grid-template-columns: 1fr; }
+    
+    .nav-links {
+        display: none; /* Will toggle with JS */
+        flex-direction: column;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background-color: var(--white);
+        padding: 20px;
+        box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+    }
+    .nav-links.active { display: flex; }
+    .hamburger { display: block; }
+    .nav-actions .btn { display: none; }
+    
+    .hero-motto { font-size: 2rem; }
+}
