@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admissions - Wamboga Memorial</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- TOP BAR & NAVBAR (Same as above) -->
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-info">
+                <span><i class="fas fa-phone"></i> +256 700 000 000</span>
+                <span><i class="fas fa-envelope"></i> info@wambogamemorial.ac.ug</span>
+            </div>
+            <div class="top-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-whatsapp"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <header id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <img src="images/badge.jpg" alt="Wamboga Memorial Logo">
+                <div class="logo-text">
+                    <h1>WAMBOGA</h1>
+                    <span>Memorial Nur & P/S</span>
+                </div>
+            </div>
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="admissions.html" class="active">Admissions</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="nav-actions">
+                <a href="#apply-form" class="btn btn-gold">Apply Now</a>
+                <div class="hamburger"><i class="fas fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- PAGE HEADER -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Admissions</h1>
+            <p>Home / Admissions</p>
+        </div>
+    </section>
+
+    <!-- FEES & REQUIREMENTS -->
+    <section class="section-padding">
+        <div class="container welcome-grid">
+            <div>
+                <h2 class="section-title">Entry Requirements</h2>
+                <ul style="list-style-type: none; color: var(--text-gray); line-height: 2;">
+                    <li><i class="fas fa-check-circle" style="color: var(--gold);"></i> <strong>Nursery (Baby - Top Class):</strong> Birth Certificate copy, 2 passport photos.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--gold);"></i> <strong>Primary (P1 - P7):</strong> Report card from previous school, PLE results (for P5-P7), Birth Certificate, 2 passport photos.</li>
+                    <li><i class="fas fa-check-circle" style="color: var(--gold);"></i> <strong>Age Requirement:</strong> Baby class (3 years), P1 (6 years).</li>
+                </ul>
+                
+                <h2 class="section-title" style="margin-top: 40px;">Fees Structure</h2>
+                <div style="overflow-x: auto;">
+                    <table style="width: 100%; border-collapse: collapse; margin-top: 15px; text-align: left;">
+                        <tr style="background-color: var(--maroon); color: white;">
+                            <th style="padding: 12px; border: 1px solid #ddd;">Class Level</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;">Tuition (Per Term)</th>
+                            <th style="padding: 12px; border: 1px solid #ddd;">Requirements</th>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Nursery Section</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">UGX 450,000</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Uniform, Scholastic materials</td>
+                        </tr>
+                        <tr style="background-color: var(--light-gray);">
+                            <td style="padding: 12px; border: 1px solid #ddd;">P1 - P3</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">UGX 550,000</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Uniform, Books, Lunch</td>
+                        </tr>
+                        <tr>
+                            <td style="padding: 12px; border: 1px solid #ddd;">P4 - P7</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">UGX 650,000</td>
+                            <td style="padding: 12px; border: 1px solid #ddd;">Uniform, Books, Lunch</td>
+                        </tr>
+                    </table>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9rem; color: #888;">* Fees can be paid in installments. Contact the bursar for more details.</p>
+            </div>
+
+            <!-- APPLICATION FORM -->
+            <div id="apply-form" style="background-color: var(--light-gray); padding: 40px; border-radius: 10px; border-top: 5px solid var(--gold);">
+                <h2 class="section-title" style="font-size: 1.8rem;">Apply Online</h2>
+                <p style="margin-bottom: 20px; color: var(--text-gray);">Fill out this form and our admissions team will contact you.</p>
+                
+                <form action="#" method="POST">
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 5px;">Child's Full Name</label>
+                        <input type="text" placeholder="Enter child's name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+                    
+                    <div style="margin-bottom: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 5px;">Class Applying For</label>
+                            <select required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                                <option value="">Select Class</option>
+                                <option>Baby Class</option>
+                                <option>Middle Class</option>
+                                <option>Top Class</option>
+                                <option>Primary One (P1)</option>
+                                <option>Primary Two (P2)</option>
+                                <option>Primary Three (P3)</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label style="display: block; font-weight: 600; margin-bottom: 5px;">Child's Age</label>
+                            <input type="number" placeholder="e.g 5" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                        </div>
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 5px;">Parent/Guardian Name</label>
+                        <input type="text" placeholder="Enter your name" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+
+                    <div style="margin-bottom: 15px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 5px;">Phone Number</label>
+                        <input type="tel" placeholder="e.g 0770000000" required style="width: 100%; padding: 12px; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+
+                    <div style="margin-bottom: 20px;">
+                        <label style="display: block; font-weight: 600; margin-bottom: 5px;">Upload Birth Certificate (Optional)</label>
+                        <input type="file" accept="image/*,.pdf" style="width: 100%; padding: 10px; background: white; border: 1px solid #ccc; border-radius: 5px;">
+                    </div>
+
+                    <button type="submit" class="btn btn-maroon" style="width: 100%; font-size: 1rem;">Submit Application</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER (Same as above) -->
+    <footer>
+        <div class="container footer-grid">
+            <div class="footer-col">
+                <div class="logo">
+                    <img src="images/badge.jpg" alt="Logo">
+                    <div class="logo-text">
+                        <h2 style="color: white; font-size: 1.2rem;">WAMBOGA MEMORIAL</h2>
+                        <span style="color: var(--gold); font-size: 0.8rem;">Nursery & Primary School</span>
+                    </div>
+                </div>
+                <p style="margin-top: 15px; color: #ccc;">Hardwork and Discipline Make Us Success. We promote knowledge, skills and values.</p>
+            </div>
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="academics.html">Academics</a></li>
+                    <li><a href="staff.html">Staff</a></li>
+                    
+                    <li><a href="gallery.html">Gallery</a></li>
+                    <li><a href="projects.html">Support Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h3>Contact Us</h3>
+                <ul class="contact-list">
+                    <li><i class="fas fa-map-marker-alt"></i> Your Location, Uganda</li>
+                    <li><i class="fas fa-phone"></i> +256 700 000 000</li>
+                    <li><i class="fas fa-envelope"></i> info@wamboga.ac.ug</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Wamboga Memorial Nursery & Primary School. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
